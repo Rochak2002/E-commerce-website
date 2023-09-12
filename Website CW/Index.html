@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>E-Book Store</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/Style.css" />
+  <link rel="stylesheet" href="./assets/css/index.css" />
+  <link rel="stylesheet" href="assets/css/mobile-style.css">
+</head>
+
+<body>
+  <header>
+    <div class="container-fluid p-0"
+      style="background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(11,11,47,1) 35%, rgba(24,146,170,1) 100%);">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">
+          <i class="fas fa-book-reader fa-2x mx-3"></i>Books</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-align-right text-light"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="mr-auto"></div>
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">HOME
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./product.html">Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./blog.html">Blog</a>
+            </li>
+            <li class="nav-item dropdown">
+              <div class="dropdown">
+                <a href="./research.html" class="nav-link">Research</a>
+              </div>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="time">
+          <div id="Clock"></div>
+          <div class="social text-gray">
+            <a href="http://www.facebook.com" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="http://www.instagram.com" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="http://www.twitter.com" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="http://www.youtube.com" title="Youtube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+    </div>
+
+    <script>
+      function showTime() {
+        var date = new Date();
+        var h = date.getHours();
+        var m = date.getMinutes();
+        var s = date.getSeconds();
+        var session = "AM";
+
+        if (h == 0) {
+          h = 12;
+        }
+
+        if (h > 12) {
+          h = h - 12;
+          session = "PM";
+        }
+        h = (h < 10) ? "0" + h : h;
+        m = (m < 10) ? "0" + m : m;
+        s = (s < 10) ? "0" + s : s;
+        var time = "Time" + " " + h + ":" + m + ":" + s + " " + session;
+        document.getElementById("Clock").innerText = time;
+        document.getElementById("Clock").innerContent = time;
+        setTimeout(showTime, 1000);
+      }
+      showTime()
+    </script>
+    </nav>
+    </div>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-7 col-sm-12  text-white">
+          <h6>AUTHOR: Rochak</h6>
+          <h1>Elaborate your English</h1>
+          <a href="product.html">
+
+            <button class="btn btn-light px-5 py-2 primary-btn">
+              Explore these Books
+            </button>
+          </a>
+        </div>
+        <div class="col-md-5 col-sm-12  h-25">
+          <img src="assets/images/header-img.png" alt="Book" />
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="section-1">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-6 col-12">
+            <div class="pray">
+              <h2>Bestseller</h2>
+              <img src="assets/images/Book 16.jpg" alt="Pray" class="" />
+            </div>
+          </div>
+          <div class="col-md-6 col-12">
+            <div class="panel text-left">
+              <h1>Anna Karinina</h1>
+              <p class="pt-4">
+
+              </p>
+              <p>
+                Acclaimed by many as the world's greatest novel, Anna Karenina provides a vast panorama of contemporary
+                life in Russia and of humanity in general. In it Tolstoy uses his intense imaginative insight to create
+                some of the most memorable characters in all of literature. Anna is a sophisticated woman who abandons
+                her empty existence as the wife of Karenin and turns to Count Vronsky to fulfil her passionate nature -
+                with tragic consequences. Levin is a reflection of Tolstoy himself, often expressing the author's own
+                views and convictions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="container-fluid text-center">
+        <div class="numbers d-flex flex-md-row flex-wrap justify-content-center">
+          <div class="rect">
+            <h1>2345</h1>
+            <p>Happy Client</p>
+          </div>
+          <div class="rect">
+            <h1>6784</h1>
+            <p>Books Sold</p>
+          </div>
+          <div class="rect">
+            <h1>1056</h1>
+            <p>Series Sold</p>
+          </div>
+          <div class="rect">
+            <h1>9152</h1>
+            <p>Total Projects</p>
+          </div>
+        </div>
+      </div> -->
+      <!------------------offer ------------>
+    </section class="section-2">
+    <div class="small-container">
+      <div class="row">
+        <div class="col-2">
+          <img src="assets/images/offer-Book.jpg" class="offer-img"
+            style="height: 50vh; width: 40vh; padding-left: 30px;" />
+        </div>
+        <div class="col-2">
+          <p>Available on EbookStore</p>
+          <br />
+          <h2>I Don't Want To Die Poor</h2>
+          <br />
+          <small>
+            Making Michael Arceneaux's I Don't Want to Die Poor required
+            reading in high schools across the country would help a lot of
+            young people think twice about the promise that going to college
+            at any cost is the only path to upward social mobility.
+          </small>
+          <a href="#" class="btn">Buy Now &#8594;</a>
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+
+    <div class="purchase text-center">
+      <h1>Purchase Whatever You Want</h1>
+      <p>
+        We bring to you a wide range of variety so that you are never bored!
+      </p>
+      <div class="cards">
+        <div class="d-flex flex-row justify-content-center flex-wrap">
+          <div class="card">
+            <div class="card-body">
+              <div class="title">
+                <h5 class="card-title">PDF</h5>
+              </div>
+              <p class="card-text">
+                With supporting text below as a natural lead-in.
+              </p>
+              <div class="pricing">
+                <h1>Rs1177.9</h1>
+                <a href="#" class="btn btn-dark px-5 py-2 primary-btn mb-5">Purchase Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="title">
+                <h5 class="card-title">E-book</h5>
+              </div>
+              <p class="card-text">
+                With supporting text below as a natural lead-in.
+              </p>
+              <div class="pricing">
+                <h1>Rs1199.9</h1>
+                <a href="#" class="btn btn-dark px-5 py-2 primary-btn mb-5">Purchase Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="title">
+                <h5 class="card-title">Print Copy</h5>
+              </div>
+              <p class="card-text">
+                With supporting text below as a natural lead-in.
+              </p>
+              <div class="pricing">
+                <h1>Rs1158.9</h1>
+                <a href="#" class="btn btn-dark px-5 py-2 primary-btn mb-5">Purchase Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+    <section class="section-3 container-fluid p-0 text-center">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <h1>Download Our App for all Platform</h1>
+
+        </div>
+      </div>
+      <div class="platform row">
+        <div class="col-md-6 col-sm-12 text-right">
+          <div class="desktop shadow-lg">
+            <div class="d-flex flex-row justify-content-center">
+              <i class="fas fa-desktop fa-3x py-2 pr-3"></i>
+              <div class="text text-left">
+                <h3 class="pt-1 m-0">Desktop</h3>
+                <p class="p-0 m-0">On website</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12 text-left">
+          <div class="desktop shadow-lg">
+            <div class="d-flex flex-row justify-content-center">
+              <i class="fas fa-mobile-alt fa-3x py-2 pr-3"></i>
+              <div class="text text-left">
+                <h3 class="pt-1 m-0">On Mobile</h3>
+                <p class="p-0 m-0">On Play Store</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4 -->
+    <section class="section-4">
+      <div class="container text-center">
+        <h1 class="text-dark">What our Reader's Say about us</h1>
+
+      </div>
+      <div class="team row ">
+        <div class="col-md-4 col-12 text-center">
+          <div class="card mr-2 d-inline-block shadow-lg">
+            <div class="card-img-top">
+              <img src="assets/images/sundar.jpg" class="img-fluid border-radius p-4" alt="">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Sundar Pichai</h3>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint iure autem recusandae, veniam, illo dolor
+                soluta assumenda
+                minima quia velit officia sit exercitationem nam ipsa, repellendus aut facilis quasi voluptas!
+              </p>
+              <a href="#" class="text-secondary text-decoration-none">Go somewhere</a>
+              <p class="text-black-50">CEO at Google</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-12">
+          <div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
+            <div class="carousel-inner text-center">
+              <div class="carousel-item active">
+                <div class="card mr-2 d-inline-block shadow">
+                  <div class="card-img-top">
+                    <img src="assets/images/Virat Kohli.jpg" class="img-fluid rounded-circle w-50 p-4" alt="">
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title">Virat Kohli</h3>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint iure autem recusandae, veniam, illo
+                      dolor soluta assumenda
+                      minima quia velit officia sit exercitationem nam ipsa, repellendus aut facilis quasi voluptas!
+                    </p>
+                    <a href="#" class="text-secondary text-decoration-none">Outstanding Range</a>
+                    <p class="text-black-50">Indian Cricketer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card  d-inline-block mr-2 shadow">
+                  <div class="card-img-top">
+                    <img src="assets/images/Bill-Gates-2011.jpg" class="img-fluid rounded-circle w-50 p-4" alt="">
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title">Bill Gates</h3>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint iure autem recusandae, veniam, illo
+                      dolor soluta assumenda
+                      minima quia velit officia sit exercitationem nam ipsa, repellendus aut facilis quasi voluptas!
+                    </p>
+                    <a href="#" class="text-secondary text-decoration-none">Good Variety of Books</a>
+                    <p class="text-black-50">Software Developer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-12 text-center">
+          <div class="card mr-2 d-inline-block shadow-lg">
+            <div class="card-img-top">
+              <img src="assets/images/kh.jpg" class="img-fluid border-radius p-4" alt="">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Kevin Hart</h3>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint iure autem recusandae, veniam, illo dolor
+                soluta assumenda
+                minima quia velit officia sit exercitationem nam ipsa, repellendus aut facilis quasi voluptas!
+              </p>
+              <a href="#" class="text-secondary text-decoration-none">Good Variety of Books</a>
+              <p class="text-black-50">Comedian</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container-fluid p-0">
+      <div class="row text-left">
+        <div class="col-md-5 col-sm-5">
+          <h4 class="text-light">About us</h4>
+          <p class="text-muted">
+          <p style="color: aliceblue;" Student of Islington college><br>
+            Rochak Lama<br>
+            London met ID:21049576<br>
+            Student ID:NP01CP4A210234<br>
+            Year:2021/22<br>
+            Semester:Autumn</p>
+          <p class="pt-4 text-muted">Copyright ©2021 All rights reserved | This template is made by
+            <span> Rochak</span>
+          </p>
+        </div>
+        <div class="col-md-5 col-sm-12">
+          <h4 class="text-light">Newsletter</h4>
+          <p class="text-muted">Stay Updated</p>
+          <form class="form-inline">
+            <div class="col pl-0">
+              <div class="input-group pr-5">
+                <input type="text" class="form-control bg-dark text-white" id="inlineFormInputGroupUsername2"
+                  placeholder="Email">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fas fa-arrow-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-2 col-sm-12">
+          <h4 class="text-light">Follow Us</h4>
+          <p class="text-muted">Let us be social</p>
+          <div class="column text-light">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
